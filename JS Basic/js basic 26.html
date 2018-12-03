@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 26</h1>
+        <p><em>Create a new string from a given string taking the last 3 characters and adding them at both the front and back (string length must be 3 or more)</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+                <p>Type anything here: </p>
+                <input id="user-string" type="text">
+        </form>
+    
+            <br><button type="button" onclick="last3FrontBack()">Create</button>
+    
+            <p id="result"> </p>
+        </div>
+    
+        <script>
+    
+            function last3FrontBack() {
+                var userString = document.getElementById("user-string").value;
+                    last3 = userString.slice(-3);
+                    frontBack = last3+userString+last3;
+                document.getElementById("result").innerHTML = frontBack;
+            }
+    
+        </script>
+    
+    </body>
+    </html>

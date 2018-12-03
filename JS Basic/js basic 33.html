@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 29</h1>
+        <p><em>Check if two numbers are in the range 40-60 or in the range 70-100</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>First number: </p>
+            <input id="number-one" type="text">
+            <p>Second number: </p>
+            <input id="number-two" type="text">
+        </form>
+
+        <br><button type="button" onclick="withinRange()">Check</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function withinRange() {
+            var numOne = document.getElementById("number-one").value;
+                numTwo = document.getElementById("number-two").value;
+            if ((numOne>=40 && numOne<=60) || (numTwo>=40 && numTwo<=60)) {
+                document.getElementById("result").innerHTML = 'At least one of your numbers falls in the 40-60 range.';
+            } else if ((numOne>=70 && numOne<=100) || (numTwo>=70 && numTwo<=100)) { 
+                document.getElementById("result").innerHTML = 'At least one of your numbers falls in the 70-100 range.';
+            } else {
+                document.getElementById("result").innerHTML = 'Sorry, neither of your numbers fall in the 40-60 range or 70-100 range.';
+            }
+        }
+        
+    </script>
+
+</body>
+</html>

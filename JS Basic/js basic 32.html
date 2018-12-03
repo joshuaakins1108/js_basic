@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 32</h1>
+        <p><em>Find which of two given integers is closest to 100</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>First number: </p>
+            <input id="number-one" type="text">
+            <p>Second number: </p>
+            <input id="number-two" type="text">
+        </form>
+
+        <br><button type="button" onclick="closestTo100()">Check</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function closestTo100() {
+            var numOne = document.getElementById("number-one").value;
+            var numTwo = document.getElementById("number-two").value;
+            var numOneDiff = Math.abs(numOne-100);
+            var numTwoDiff = Math.abs(numTwo-100);
+            if (numOneDiff < numTwoDiff) {
+                document.getElementById("result").innerHTML = numOne+' is closer to 100';
+            } else {
+                document.getElementById("result").innerHTML = numTwo+' is closer to 100';
+            }
+        }
+        
+    </script>
+
+</body>
+</html>

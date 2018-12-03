@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 44</h1>
+        <p><em>Check from three given positive integers that two or all of them have the same last digit</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>First integer: </p>
+            <input id="number-one" type="text">
+            <p>Second integer: </p>
+            <input id="number-two" type="text">
+            <p>Third integer: </p>
+            <input id="number-three" type="text">
+        </form>
+
+        <br><button type="button" onclick="sameLastDigit()">Check</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function sameLastDigit() {
+            var numOne = document.getElementById("number-one").value;
+                numTwo = document.getElementById("number-two").value;
+                numThree = document.getElementById("number-three").value;
+                numOneString = numOne.toString();
+                numTwoString = numTwo.toString();
+                numThreeString = numThree.toString();
+                lastNumOne = numOneString.slice(-1);
+                lastNumTwo = numTwoString.slice(-1);
+                lastNumThree = numThreeString.slice(-1);
+            if ((lastNumOne == lastNumTwo) && (lastNumTwo == lastNumThree)) {
+                document.getElementById("result").innerHTML = 'All three numbers have the same last digit.'
+            } else if ((lastNumOne == lastNumTwo) || (lastNumTwo == lastNumThree) || (lastNumOne==lastNumThree)) {
+                document.getElementById("result").innerHTML = 'Two of your numbers have the same last digit.'
+            } else {
+                document.getElementById("result").innerHTML = 'None of your numbers have the same last digit.'
+            }
+        }
+        
+    </script>
+
+</body>
+</html>

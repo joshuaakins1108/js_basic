@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 31</h1>
+        <p><em>Find the largest of three given integers</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>First number: </p>
+            <input id="number-one" type="text">
+            <p>Second number: </p>
+            <input id="number-two" type="text">
+            <p>Third number: </p>
+            <input id="number-three" type="text">
+        </form>
+
+        <br><button type="button" onclick="largestOf3()">Check</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function largestOf3() {
+            var numOne = document.getElementById("number-one").value;
+            var numTwo = document.getElementById("number-two").value;
+            var numThree = document.getElementById("number-three").value;
+            var largest = Math.max(numOne, numTwo, numThree);
+            document.getElementById("result").innerHTML = largest+' is the largest number.';
+        }
+        
+    </script>
+
+</body>
+</html>

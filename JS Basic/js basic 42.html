@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript 42</h1>
+        <p><em>Check if three given numbers are increasing in "strict mode" (each number is larger than the last) or "soft mode" (last number is larger than first number)</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>First number: </p>
+            <input id="number-one" type="text">
+            <p>Second number: </p>
+            <input id="number-two" type="text">
+            <p>Third number: </p>
+            <input id="number-three" type="text">
+        </form>
+
+        <br><button type="button" onclick="checkIncrease()">Check</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function checkIncrease() {
+            var numOne = document.getElementById("number-one").value;
+                numTwo = document.getElementById("number-two").value;
+                numThree = document.getElementById("number-three").value;
+            if ((numOne < numTwo) && (numTwo < numThree)) {
+                document.getElementById("result").innerHTML = 'Strict Mode';
+            } else if (numOne<numThree) {
+                document.getElementById("result").innerHTML = 'Soft Mode';
+            } else {
+                document.getElementById("result").innerHTML = 'Not increasing';
+            }
+        }        
+        
+    </script>
+
+</body>
+</html>

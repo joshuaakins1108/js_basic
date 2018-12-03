@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+        input {
+            width:400px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 30</h1>
+        <p><em>Check if a string "Script" presents at 5th (index 4) position in a given string (if "Script" presents in the string, return the string without "Script"; otherwise return the original one)</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>Type a sentence: </p>
+            <input id="user-string" type="text">
+        </form>
+
+        <br><button type="button" onclick="checkForScript()">Check</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function checkForScript() {
+            var userString = document.getElementById("user-string").value;
+                splitString = userString.split(' ');
+            if (splitString[4] == 'Script') {
+                splitString.splice(4,1);
+                document.getElementById("result").innerHTML = splitString.join(' ');
+            } else {
+                document.getElementById("result").innerHTML = userString;
+            }
+        }
+        
+    </script>
+
+</body>
+</html>

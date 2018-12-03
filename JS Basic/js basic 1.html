@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+        }
+        .header {
+            text-align:center;
+            border:solid lightblue 1px;
+            background:lightblue;
+        }
+        .container {
+            text-align:center;
+            padding:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 1</h1>
+        <p><em>Display the current day and time</em></p>
+    </div>
+
+    <div class="container">
+
+        <p id="dayofweek">  </p>
+        <p id="currenttime"> </p>
+
+    </div>
+
+    <script>
+
+        // code for today is function
+        var today = new Date;
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var dayName = days[today.getDay()]
+
+        document.getElementById("dayofweek").innerHTML = 'Today is: '+dayName;
+        
+        //code for current time is function
+
+        var hours = today.getHours();
+        var minutes = today.getMinutes();
+        var seconds = today.getSeconds();
+
+
+        if (minutes < 10) {
+            minutes = '0'+minutes;
+        }
+        if (seconds < 10) {
+            seconds = '0'+seconds;
+        }
+
+        if (hours > 12) {
+            hours = hours - 12;
+            seconds = seconds + ' PM';
+        } else {
+            seconds = seconds + ' AM';
+        }
+        if (hours < 10) {
+            hours = '0'+hours;
+        }
+
+        var currentTime = hours+':'+minutes+':'+seconds;
+
+        document.getElementById("currenttime").innerHTML = 'Current time is: '+currentTime;
+
+    </script>
+
+</body>
+</html>

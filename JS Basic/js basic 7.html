@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+        button {
+            position: relative;
+            top:100px;
+        }
+        .container p {
+            position: relative;
+            top:150px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 7</h1>
+        <p><em>Find all Sundays that fall on January 1st between 2014 and 2050</em></p>
+    </div>
+
+    <div class="container">
+
+        <button onclick="findSundays()">Run</button>
+        <p id="results"></p>
+
+    </div>
+
+    <script>
+
+        function findSundays () {
+            for (var year = 2014; year <=2050; year++) {
+                var day = new Date(year, 0);
+                if (day.getDay() == 0) {
+                    document.getElementById("results").innerHTML += 'January 1st is a Sunday in '+year+"<br>";
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>

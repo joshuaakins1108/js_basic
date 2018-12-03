@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 12</h1>
+        <p><em>Get the website URL</em></p>
+    </div>
+
+    <div class="container">
+
+        <br><button type="button" onclick="getUrl()">Get the URL</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function getUrl() {
+            var url = window.location.href;
+            document.getElementById("result").innerHTML = url;
+        }
+
+    </script>
+
+</body>
+</html>

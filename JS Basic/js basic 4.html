@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+        }
+        .container {
+            text-align:center;
+            padding:100px;
+        }
+        button {
+            background:rgb(175, 236, 175);
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 4</h1>
+        <p><em>Calculate the area of a triangle given three side lengths</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>Side A</p>
+            <input id="side-a" type="text">
+            <p>Side B</p>
+            <input id="side-b" type="text">
+            <p>Side C</p>
+            <input id="side-c" type="text"><br><br>
+        </form>
+
+        <button onclick="displayAnswer()">Calculate!</button>
+
+        <p id="answer"></p>
+
+    </div>
+
+    <script>
+
+        function calcArea() {
+            var a=document.getElementById("side-a").value;
+            var b=document.getElementById("side-b").value;
+            var c=document.getElementById("side-c").value;
+            var s = (parseInt(a)+parseInt(b)+parseInt(c))/2;
+            var sProd = (s-a)*(s-b)*(s-c);
+            var sFinal = sProd*s;
+            return Math.sqrt(sFinal);
+        }
+
+        function displayAnswer () {
+            document.getElementById("answer").innerHTML = calcArea();
+        }
+        
+    </script>
+
+</body>
+</html>

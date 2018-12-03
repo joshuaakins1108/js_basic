@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 16</h1>
+        <p><em>Calculate the sum of two given integers (triple the sum if integers are the same)</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>Integer one: </p>
+            <input id="integer-one" type="text">
+            <p>Integer two: </p>
+            <input id="integer-two" type="text">
+        </form>
+
+        <br><button type="button" onclick="getSum()">Calculate!</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function getSum() {
+            var intOne = document.getElementById("integer-one").value;
+            var intTwo = document.getElementById("integer-two").value;
+            if (intOne === intTwo) {
+                document.getElementById("result").innerHTML = (parseInt(intOne)+parseInt(intTwo))*3;
+            } else {
+                document.getElementById("result").innerHTML = parseInt(intOne)+parseInt(intTwo);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

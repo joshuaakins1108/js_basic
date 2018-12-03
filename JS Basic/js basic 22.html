@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 22</h1>
+        <p><em>Remove a character at the specified position of a given string and return the new string</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>Type anything here: </p>
+            <input id="user-string" type="text">
+            <p>Type the position of the character you want to remove: </p>
+            <input id="character-position" type="text">
+        </form>
+
+        <br><button type="button" onclick="removeChar()">Remove</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function removeChar() {
+            var userString = document.getElementById("user-string").value;
+            var position = document.getElementById("character-position").value;
+            var firstHalf = (userString.substring(0, position));
+            var secondHalf = (userString.substring(position+1, userString.length));
+            document.getElementById("result").innerHTML = firstHalf + secondHalf;
+        }
+
+    </script>
+
+</body>
+</html>
+
+
+<!--UNSOLVED! COME BACK LATER-->

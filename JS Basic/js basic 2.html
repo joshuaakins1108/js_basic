@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+        }
+        .header {
+            text-align:center;
+            border:solid lightblue 1px;
+            background:lightblue;
+        }
+        .container {
+            text-align:center;
+            padding:100px;
+        }
+        button {
+            border-radius:100%;
+            padding:50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 2</h1>
+        <p><em>Print the contents of the current window</em></p>
+    </div>
+
+    <div class="container">
+
+        <button id="print" onclick="printWindow()">Click Here To Print Page</button>
+
+    </div>
+
+    <script>
+
+        //function to print window
+        function printWindow() {
+            window.print();
+        } 
+
+    </script>
+
+</body>
+</html>

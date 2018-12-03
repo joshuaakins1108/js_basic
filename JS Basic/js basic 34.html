@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 34</h1>
+        <p><em>Find the larger number from two given positive integers (two numbers must be in the range 40-60)</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>First integer: </p>
+            <input id="number-one" type="text">
+            <p>Second integer: </p>
+            <input id="number-two" type="text">
+        </form>
+
+        <br><button type="button" onclick="largerWithinRange()">Check</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function largerWithinRange() {
+            var numOne = document.getElementById("number-one").value;
+                numTwo = document.getElementById("number-two").value;
+                larger = Math.max(numOne, numTwo);
+                if ((numOne>=40 && numOne<=60) && (numTwo>=40 && numTwo<=60)) {
+                    document.getElementById("result").innerHTML = larger+' is the larger number.';
+                } else {
+                    document.getElementById("result").innerHTML = 'At least one of your numbers is not in the range 40-60';
+                }
+        }
+        
+    </script>
+
+</body>
+</html>

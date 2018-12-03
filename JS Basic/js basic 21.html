@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 21</h1>
+        <p><em>Create a new string adding "Py" in front of a given string (if the given string begins with "Py" then return the original string)</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>Type anything here: </p>
+            <input id="user-string" type="text">
+        </form>
+
+        <br><button type="button" onclick="addPy()">Check</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function addPy() {
+            var userString = document.getElementById("user-string").value;
+            if (userString.startsWith('Py')) {
+                document.getElementById("result").innerHTML = userString;
+            } else {
+                document.getElementById("result").innerHTML = 'Py'+userString;
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 19</h1>
+        <p><em>Check if a given integer is within 20 of 100 or 400</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>Type your number here: </p>
+            <input id="user-number" type="text">
+        </form>
+
+        <br><button type="button" onclick="checkWithin20()">Check</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function checkWithin20() {
+            var userNum = document.getElementById("user-number").value;
+            if (userNum >= 80 && userNum <=120) {
+                document.getElementById("result").innerHTML = 'Yep, it\'s within 20 of 100!';
+            } else if (userNum >= 380 && userNum <= 420) {
+                document.getElementById("result").innerHTML = 'Yep, it\'s within 20 of 400!';
+            } else {
+                document.getElementById("result").innerHTML = 'Sorry, that number isn\'t within 20 of 100 or 400.';
+            }
+        }
+
+    </script>
+
+</body>
+</html>

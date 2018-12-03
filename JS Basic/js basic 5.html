@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+        #w3resource {
+            position:relative;
+            top:100px;
+        }
+
+    </style>
+</head>
+
+<body onload="animate_string('w3resource')">
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 5</h1>
+        <p><em>Make the string 'w3resource' scroll on a marquee</em></p>
+    </div>
+
+    <div class="container">
+
+        <p id="w3resource">w3resource</p>
+
+    </div>
+
+    <script>
+
+        function animate_string(id) 
+            {
+    var element = document.getElementById(id);
+    var textNode = element.childNodes[0]; // assuming no other children
+    var text = textNode.data;
+
+setInterval(function () 
+{
+ text = text[text.length - 1] + text.substring(0, text.length - 1);
+  textNode.data = text;
+}, 100);
+}
+ 
+    </script>
+
+</body>
+</html>

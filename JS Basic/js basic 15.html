@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 15</h1>
+        <p><em>Calculate the difference between a given number and 13 (double the difference if the number is greater than 13)</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <br><input id="user-number" type="text">
+        </form>
+
+        <br><button type="button" onclick="getDiff()">Calculate!</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function getDiff() {
+            var userNumber = document.getElementById("user-number").value;
+            if (userNumber > 13) {
+                document.getElementById("result").innerHTML = (userNumber-13)*2;
+            } else {
+                document.getElementById("result").innerHTML = 13-userNumber;
+            }
+        }
+
+    </script>
+
+</body>
+</html>

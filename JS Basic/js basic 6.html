@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+        form {
+            position: relative;
+            top:100px;
+        }
+        button {
+            position: relative;
+            top:150px;
+        }
+        #result {
+            position: relative;
+            top:150px;
+        }
+
+    </style>
+</head>
+
+<body onload="animate_string('w3resource')">
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 6</h1>
+        <p><em>Check whether a given year is a leap year</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            Year<br>
+            <input id="year-input" type="text">
+        </form>
+        <button onclick="checkYear()">Check</button>
+        <p id="result"> </p>
+
+    </div>
+
+    <script>
+
+        function checkYear() {
+            var givenYear = document.getElementById("year-input").value;
+            if (Number.isInteger(givenYear / 4)) {
+                document.getElementById("result").innerHTML = "It's a leap year!";
+            } else {
+                document.getElementById("result").innerHTML = "It's NOT a leap year!";
+            }
+        }
+        
+ 
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript 40</h1>
+        <p><em>Check from two given integers if either one is 8 or if their sum or difference is 8</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>First integer: </p>
+            <input id="number-one" type="text">
+            <p>Second integer: </p>
+            <input id="number-two" type="text">
+        </form>
+
+        <br><button type="button" onclick="get8()">Check</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function get8() {
+            var numOne = document.getElementById("number-one").value;
+                numTwo = document.getElementById("number-two").value;
+            if ((parseInt(numOne) == 8) || (parseInt(numTwo) == 8)) {
+                document.getElementById("result").innerHTML = 'At least one of your numbers is 8';
+            } else if (Math.abs((parseInt(numOne)-parseInt(numTwo)))==8) {
+                document.getElementById("result").innerHTML = 'The difference of your numbers is 8';
+            } else if (Math.abs((parseInt(numOne)+parseInt(numTwo)))==8) {
+                document.getElementById("result").innerHTML = 'The sum of your numbers is 8';
+            } else {
+                document.getElementById("result").innerHTML = 'No 8s to be found!';
+            }
+        }        
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 20</h1>
+        <p><em>Given two integers, check if one is positive and the other is negative</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>First number: </p>
+            <input id="first-number" type="text">
+            <p>Second number: </p>
+            <input id="second-number" type="text">
+        </form>
+
+        <br><button type="button" onclick="checkPosNeg()">Check</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function checkPosNeg() {
+            var numOne = document.getElementById("first-number").value;
+            var numTwo = document.getElementById("second-number").value;
+            if (numOne > 0 && numTwo < 0) {
+                document.getElementById("result").innerHTML = 'Yep! First number is positive and second number is negative.';
+            } else if (numOne < 0 && numTwo > 0) {
+                document.getElementById("result").innerHTML = 'Yep! First number is negative and second number is positive.';
+            } else {
+                document.getElementById("result").innerHTML = 'Nope, sorry! Either both numbers are positive or both numbers are negative.';
+            }
+        }
+
+    </script>
+
+</body>
+</html>

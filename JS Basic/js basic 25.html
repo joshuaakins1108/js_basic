@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 25</h1>
+        <p><em>Check if a given positive number is a multiple of 3 or a multiple of 7</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>Type a positive number here: </p>
+            <input id="user-number" type="text">
+        </form>
+
+        <br><button type="button" onclick="multiple3Or7()">Create</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function multiple3Or7() {
+            var userNum = document.getElementById("user-number").value;
+                multiple3 = userNum/3;
+                multiple7 = userNum/7;
+            if (Number.isInteger(multiple3) && Number.isInteger(multiple7)) {
+                document.getElementById("result").innerHTML = 'Wow! Your number is a multiple of 3 <strong>and</strong> 7!';
+            } else if (Number.isInteger(multiple3)) {
+                document.getElementById("result").innerHTML = 'Yep, your number is a multiple of 3!';
+            } else if (Number.isInteger(multiple7)) {
+                document.getElementById("result").innerHTML = 'Yep, your number is a multiple of 7!';
+            } else {
+                document.getElementById("result").innerHTML = 'Sorry, your number is not a multiple of 3 or 7.'
+            }        
+        }
+
+    </script>
+
+</body>
+</html>

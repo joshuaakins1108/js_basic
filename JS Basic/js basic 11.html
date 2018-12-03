@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 11</h1>
+        <p><em>Convert temperatures from Fahrenheit to Celsius and vice-versa</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>Type temperature here: </p>
+            <input id="temp" type="text">
+        </form>
+
+        <br><button id="convert-to-c" type="button" onclick="convertToC()">Convert to Celcius</button>
+        <br><br><button id="convert-to-f" type="button" onclick="convertToF()">Convert to Fahrenheit</button>
+
+        <p id="result"> </p>
+
+    </div>
+
+    <script>
+
+        function convertToC () {
+            var temp = document.getElementById("temp").value;
+            document.getElementById("result").innerHTML = (temp-32)/1.8+'°C';
+        }
+
+        function convertToF () {
+            var temp = document.getElementById("temp").value;
+            document.getElementById("result").innerHTML = (temp*1.8)+32+'°F';
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+        }
+        .container {
+            text-align:center;
+            padding:100px;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 3</h1>
+        <p><em>Get the current date (mm/dd/yyyy)</em></p>
+    </div>
+
+    <div class="container">
+
+
+    </div>
+
+    <script>
+
+        var date = new Date;
+        var year = (date.getFullYear());
+        var month = (date.getMonth()+1);
+
+        if (month < 10) {
+            month = '0'+month;
+        }
+
+        var day = (date.getDate());
+
+        if (day < 10) {
+            day = '0'+day;
+        }
+
+        var currentDate = (month+'/'+day+'/'+year);
+
+
+        document.write(currentDate);
+
+    </script>
+
+</body>
+</html>

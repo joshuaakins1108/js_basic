@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 28</h1>
+        <p><em>Check if two given integers are in the range 50-99</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>First integer: </p>
+            <input id="number-one" type="text">
+            <p>Second integer: </p>
+            <input id="number-two" type="text">
+        </form>
+
+        <br><button type="button" onclick="between50And99()">Check</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function between50And99() {
+            var numOne = document.getElementById("number-one").value;
+                numTwo = document.getElementById("number-two").value;
+            if (numOne>=50 && numOne<=99 && numTwo>=50 && numTwo<=99) {
+                document.getElementById("result").innerHTML = 'Congrats! Both integers are in the range 50-99!';
+            } else if (numOne>=50 && numOne<=99) {
+                document.getElementById("result").innerHTML = 'Only your first integer is in the range 50-99.';
+            } else if (numTwo>=50 && numTwo<=99) {
+                document.getElementById("result").innerHTML = 'Only your second integer is in the range 50-99.';
+            }
+            else {
+                document.getElementById("result").innerHTML = 'Sorry, neither of your integers are in the range 50-99.';
+            }
+        }
+        
+    </script>
+
+</body>
+</html>

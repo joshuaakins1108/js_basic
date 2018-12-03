@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript 37</h1>
+        <p><em>Create a new string in which the first 3 characters are lower case (if string length is less than 3, convert all characters to upper case)</em></p>
+    </div>
+
+    <div class="container">
+
+        <p>Type anything here: </p>
+        <form>
+            <input id="user-string" type="text">
+        </form>
+
+        <br><button type="button" onclick="first3Lower()">Create!</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function first3Lower() {
+            var userString = document.getElementById("user-string").value;
+                first3 = userString.substring(0, 3);
+                remaining = userString.substring(3);
+                if (userString.length >= 3) {
+                    var lower = first3.toLowerCase();
+                    document.getElementById("result").innerHTML = lower+remaining;
+                } else {
+                    document.getElementById("result").innerHTML = userString.toUpperCase();
+                }
+        }
+        
+    </script>
+
+</body>
+</html>

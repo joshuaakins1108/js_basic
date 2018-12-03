@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+        button {
+            position: relative;
+            top:50px;
+        }
+        .container p {
+            position: relative;
+            top:100px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 9</h1>
+        <p><em>Calculate the days left until next Christmas</em></p>
+    </div>
+
+    <div class="container">
+
+        <button type="button" onclick="daysUntilXmas()">How much longer?</button>
+        <p id="result"> </p>
+
+    </div>
+
+    <script>
+
+        function daysUntilXmas() {
+            var christmas = new Date('Dec 25 2018');
+            var today = new Date();
+            var daysLeft = christmas - today;
+            document.getElementById("result").innerHTML = '<strong>'+parseInt((((daysLeft/1000)/60)/60)/24)+'</strong>'+' days left until Christmas!';
+        }
+
+    </script>
+
+</body>
+</html>

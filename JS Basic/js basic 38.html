@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript 38</h1>
+        <p><em>Check which letter grade a student will receive based on numerical score (A=89-100, B=79-88, etc)</em></p>
+    </div>
+
+    <div class="container">
+
+        <p>Type anything here: </p>
+        <form>
+            <input id="score" type="text">
+        </form>
+
+        <br><button type="button" onclick="checkGrade()">Check grade</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function checkGrade() {
+            var score = document.getElementById("score").value;
+                switch (true) {
+                    case score >= 89 && score <= 100:
+                        document.getElementById("result").innerHTML = 'Your grade: A';
+                        break;
+                    case score >=79 && score <=88:
+                        document.getElementById("result").innerHTML = 'Your grade: B';
+                        break;
+                    case score >=69 && score <=78:
+                        document.getElementById("result").innerHTML = 'Your grade: C';
+                        break;
+                    case score >=59 && score <=68:
+                        document.getElementById("result").innerHTML = 'Your grade: D';
+                        break;
+                    case score >=0 && score <=58:
+                        document.getElementById("result").innerHTML = 'Your grade: F';
+                        break;
+                    default:
+                        document.getElementById("result").innerHTML = 'Not a valid score';
+                }
+        }        
+        
+    </script>
+
+</body>
+</html>

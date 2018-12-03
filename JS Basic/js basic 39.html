@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript 39</h1>
+        <p><em>Compute the sum of the two given integers (if the sum is in the range 50-80, return 65; otherwise return 80)</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>First number: </p>
+            <input id="number-one" type="text">
+            <p>Second number: </p>
+            <input id="number-two" type="text">
+        </form>
+
+        <br><button type="button" onclick="getSum()">Calculate!</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function getSum() {
+            var numOne = document.getElementById("number-one").value;
+                numTwo = document.getElementById("number-two").value;
+                sum = parseInt(numOne)+parseInt(numTwo);
+                if (sum >= 50 && sum <= 80) {
+                    document.getElementById("result").innerHTML = 65;
+                } else {
+                    document.getElementById("result").innerHTML = 80;
+                }
+
+                return console.log(sum);
+        }        
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 23</h1>
+        <p><em>Create a new string from a given string by switching the position of first and last characters (string length must be greater than or equal to 1)</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <p>Type anything here: </p>
+            <input id="user-string" type="text">
+        </form>
+
+        <br><button type="button" onclick="switchFirstLast()">Flip!</button>
+
+        <p id="result"> </p>
+    </div>
+
+    <script>
+
+        function switchFirstLast() {
+            var userString = document.getElementById("user-string").value;
+                firstChar = userString.charAt(0);
+                lastChar = userString.charAt(userString.length-1);
+                swap = lastChar+(userString.slice(1, -1))+firstChar;
+            document.getElementById("result").innerHTML = swap;
+        }
+
+    </script>
+
+</body>
+</html>

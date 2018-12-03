@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice</title>
+    <style>
+        * {
+            font-family:Calibri;
+            text-align:center;
+        }
+        .header {
+            border:solid lightblue 1px;
+            background:lightblue;
+            text-align:center;
+        }
+        .container button, input {
+            margin:30px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="heading">JavaScript Basic 8</h1>
+        <p><em>Create a program that picks a random integer between 1 and 10, then allows you to guess and informs you if you're correct</em></p>
+    </div>
+
+    <div class="container">
+
+        <form>
+            <br><p>Guess a number between 1 and 10 and type it in the box</p>
+            <input id="guess" type="text">
+            <br><button type="button" onClick="random()">See if you're right!</button>
+            <br><p id="result"> </p>
+            <br><button id="refresh" type="button" onClick="window.location.reload()">Click here to try again!</button>
+        </form>
+
+    </div>
+
+    <script>
+        function random () {
+            var ranInteger = Math.floor(Math.random() * 10) + 1;
+            var guess = document.getElementById("guess").value;
+            if (ranInteger == guess) {
+                document.getElementById("result").innerHTML = 'Correct! Nice job!';
+            } else {
+                document.getElementById("result").innerHTML = 'Incorrect. Actual number = '+ranInteger;
+            }
+        }
+    </script>
+
+</body>
+</html>
